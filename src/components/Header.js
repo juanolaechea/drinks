@@ -5,9 +5,9 @@ const Header = ({ messege }) => {
     
     <nav className="navbar navbar-light bg-info text-center ">
       <div className="container xxl ">
-        <a className="navbar-brand" href="#">
+        <p className="navbar-brand" >
           <h3 >{messege}</h3>
-        </a>
+        </p>
       </div>
     </nav>
   );
