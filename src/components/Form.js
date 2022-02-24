@@ -6,7 +6,7 @@ const Form = () => {
   //context
   const { category } = useContext(CategoryContext);
   const { setSearch, setCalled } = useContext(CombinationContext);
-
+ 
   //state
   const [combination, setCombination] = useState({
     ingredient: "",
@@ -42,13 +42,14 @@ const Form = () => {
             className="form-control"
             placeholder="Search by ingredient"
             onChange={getCombination}
+            required
           />
         </div>
         <div className="col-md-4">
           <select
             className="form-control"
             name="category"
-            onChange={getCombination}
+            onChange={getCombination}     
           >
             <option defaultValue="">Open this select menu</option>
             {category.map((cat) => (

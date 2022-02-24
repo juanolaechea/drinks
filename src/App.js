@@ -5,22 +5,22 @@ import ListDrinks from "./components/ListDrinks";
 
 import CategoryProvider from "./contexs/CategoryContex";
 import CombinationProvider from "./contexs/CombinationContex";
+import ModelProvider from "./contexs/ModalContext";
 
 function App() {
   return (
     <CategoryProvider>
       <CombinationProvider>
-        <Header messege="Your favorite Drinks!" />
+        <ModelProvider>
+          <Header messege="Your favorite Drinks!" />
 
-        <div className="container mt-5 ">
-          <div className="row">
-            <Form />
+          <div className="container mt-5 ">
+            <div className="row">
+              <Form />
+            </div>
+            <ListDrinks />
           </div>
-        <ListDrinks/>
-        </div>
-
-
-        
+        </ModelProvider>
       </CombinationProvider>
     </CategoryProvider>
   );
